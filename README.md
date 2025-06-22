@@ -1,3 +1,5 @@
+# dotfiles
+
 Here's how you can set up git tracking for your tmux and nvim config files:
 
 ## Create a dotfiles repository
