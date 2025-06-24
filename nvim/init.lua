@@ -1,10 +1,10 @@
+vim.g.mapleader = " "
+
 -- set indent to 2 spaces
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
-
-vim.g.mapleader = " "
 
 -- Bootstrap lazy.nvim (https://lazy.folke.io/)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -24,6 +24,3 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
-
-
-vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal right toggle <CR>')

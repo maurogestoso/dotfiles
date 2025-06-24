@@ -1,5 +1,5 @@
+-- Docs: https://github.com/nvim-neo-tree/neo-tree.nvim
 return {
-  -- Neotree https://github.com/nvim-neo-tree/neo-tree.nvim
   {
     "nvim-neo-tree/neo-tree.nvim",
     branch = "v3.x",
@@ -8,6 +8,8 @@ return {
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
-  },
+    config = function()
+      vim.keymap.set('n', '<C-n>', ':Neotree filesystem reveal right toggle <CR>')
+    end
+  }
 }
-
