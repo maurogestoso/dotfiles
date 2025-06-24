@@ -1,6 +1,4 @@
 return {
-  -- Catppuccin https://github.com/catppuccin/nvim
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   -- Telescope https://github.com/nvim-telescope/telescope.nvim
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
