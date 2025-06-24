@@ -1,7 +1,4 @@
 return {
-  
-  -- Treesitter https://github.com/nvim-treesitter/nvim-treesitter
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
   -- Neotree https://github.com/nvim-neo-tree/neo-tree.nvim
   {
     "nvim-neo-tree/neo-tree.nvim",
