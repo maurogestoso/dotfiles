@@ -9,7 +9,8 @@ vim.cmd("set shiftwidth=2")
 -- always show sign column for diagnostics
 vim.cmd("set signcolumn=yes")
 
--- show line numbers
+-- show line numbers (hybrid mode: absolute + relative)
 vim.cmd("set number")
+vim.cmd("set relativenumber")
 
 
