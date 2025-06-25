@@ -23,22 +23,31 @@ This creates symlinks from the dotfiles to their expected locations:
 
 ## Neovim Configuration Architecture
 
-The nvim configuration is built on **LazyVim** with the following structure:
+The repository contains two Neovim configurations:
 
-### Core Setup
-- `init.lua`: Entry point that bootstraps the configuration
-- `lua/config/lazy.lua`: Plugin manager setup with language-specific extras
+### Current Configuration (`nvim/`)
+**From-scratch setup** using Lazy.nvim plugin manager:
+- `init.lua`: Entry point that bootstraps Lazy.nvim
+- `lua/vim-options.lua`: Basic Vim settings and leader key configuration
+- `lua/plugins/`: Individual plugin configurations
+  - `catppuccin.lua`: Colorscheme
+  - `telescope.lua`: Fuzzy finder with keybindings
+  - `treesitter.lua`: Syntax highlighting
+  - `neotree.lua`: File explorer (Ctrl-n toggle)
+  - `lualine.lua`: Status line
+  - `lsp-config.lua`: LSP setup with Mason (currently Lua LSP only)
+
+### Backup Configuration (`nvim.bak/`)
+**LazyVim-based** with extensive features:
+- Full LazyVim distribution with language extras
 - Enabled language support: TypeScript, Go, JSON, Tailwind
 - Enabled extras: ESLint, Prettier formatting
-
-### Plugin System
-Custom plugins are in `lua/plugins/`:
-- `golang.lua`: Go language support
 - `vim-tmux-navigator.lua`: tmux-vim navigation integration with Ctrl-hjkl keybindings
 
 ### Key Integrations
-- **vim-tmux-navigator**: Seamless navigation between nvim panes and tmux panes using Ctrl-h/j/k/l
-- **LazyVim extras**: Pre-configured language servers and tools for TypeScript, Go, and web development
+- **tmux-vim navigation**: Seamless pane navigation using Ctrl-h/j/k/l (available in backup config)
+- **Catppuccin theming**: Consistent theme across nvim and tmux
+- **Telescope**: Fuzzy finder with leader-based keybindings
 
 ## tmux Configuration
 
