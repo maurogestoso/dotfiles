@@ -6,4 +6,10 @@ vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 
+-- always show sign column for diagnostics
+vim.cmd("set signcolumn=yes")
+
+-- show line numbers
+vim.cmd("set number")
+
 
